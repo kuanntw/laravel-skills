@@ -9,7 +9,7 @@
 - Laravel Core 技能模組（架構、API、資料層、品質、交付、AI 協作）。
 - Livewire 專用技能模組（元件設計、表單與列表、測試、效能）。
 - i18n 多語系技能模組（短文案策略、語系預設、租戶覆蓋翻譯）。
-- 可複用模板（需求澄清、實作計畫、PR checklist、Livewire 任務模板）。
+- 可複用模板（需求澄清、實作計畫、PR checklist、Livewire 任務模板、操作手冊模板）。
 
 ## 快速使用方式（建議）
 
@@ -18,8 +18,9 @@
 3. 如果是 Blade + Livewire 任務，優先走 `12-livewire/*` skills。
 4. 若有多語系需求，先走 `16-i18n/*` 並使用 `templates/i18n/i18n-rollout-checklist.md`。
 5. 先用 `templates/implementation-plan.md` 或 `templates/livewire/livewire-task-template.md` 產出計畫。
-6. 完成後依 `30-quality/testing-and-quality.md` 與 `12-livewire/livewire-testing.md` 跑驗證。
-7. 用 `templates/pr-checklist.md` 做交付前檢查。
+6. 完成後依 `30-quality/testing-and-quality.md` + `30-quality/spec-consistency-and-coverage.md` 跑 spec 一致性與 coverage 檢查。
+7. 補齊 `templates/operation-manual-template.md` 產出操作手冊。
+8. 用 `templates/pr-checklist.md` 做交付前檢查。
 
 ## 適用情境
 

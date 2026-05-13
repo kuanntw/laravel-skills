@@ -17,7 +17,9 @@
 | 17 | `tenant-translation-override` | SaaS 租戶需覆蓋翻譯 | tenant 覆蓋層與治理規範 |
 | 20 | `data-and-eloquent` | 需要 schema 與 Eloquent | migration、關聯、query 策略 |
 | 30 | `testing-and-quality` | 寫完功能要驗證 | 測試矩陣、最低測試清單 |
+| 31 | `spec-consistency-and-coverage` | 需強化 spec 對齊與 unit coverage | AC 對應矩陣、coverage 摘要 |
 | 40 | `release-and-observability` | 準備上線與維運 | 發版 checklist、監控與 rollback |
+| 41 | `operation-manual` | 交付後需要可操作文件 | 操作手冊與排障指引 |
 | 50 | `ai-collaboration-playbook` | AI 共寫流程治理 | Prompt 模板、審查規則、風險控管 |
 
 ## 使用原則
@@ -35,7 +37,7 @@
 4. `16 multilingual-strategy` + `17 tenant-translation-override`
 5. `20 data-and-eloquent`
 6. 實作
-7. `14 livewire-testing` + `30 testing-and-quality`
+7. `14 livewire-testing` + `30 testing-and-quality` + `31 spec-consistency-and-coverage`
 8. `15 livewire-performance-and-pitfalls`
-9. `40 release-and-observability`
+9. `40 release-and-observability` + `41 operation-manual`
 

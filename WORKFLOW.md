@@ -71,3 +71,11 @@
 4. `README.md`
 5. `WORKFLOW.md`
 
+
+## 7) 開發同步要求（新增）
+
+每次功能開發要同步交付以下三項：
+
+1. **Spec 一致性**：PR 可追蹤 spec 與 AC 對應。
+2. **Unit test coverage**：核心商業邏輯需有 coverage 摘要。
+3. **操作手冊**：需提供可執行的操作與排錯步驟。
