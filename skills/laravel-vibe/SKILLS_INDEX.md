@@ -13,6 +13,8 @@
 | 13 | `livewire-forms-and-tables` | Livewire CRUD 互動頁 | 表單/搜尋/分頁實作清單 |
 | 14 | `livewire-testing` | 寫完 Livewire 元件要驗證 | component 測試矩陣 |
 | 15 | `livewire-performance-and-pitfalls` | 遇到延遲或重繪過多 | 效能優化與避坑指引 |
+| 16 | `multilingual-strategy` | 導入多語系與短文案策略 | key 命名、fallback、語系優先序 |
+| 17 | `tenant-translation-override` | SaaS 租戶需覆蓋翻譯 | tenant 覆蓋層與治理規範 |
 | 20 | `data-and-eloquent` | 需要 schema 與 Eloquent | migration、關聯、query 策略 |
 | 30 | `testing-and-quality` | 寫完功能要驗證 | 測試矩陣、最低測試清單 |
 | 40 | `release-and-observability` | 準備上線與維運 | 發版 checklist、監控與 rollback |
@@ -30,9 +32,10 @@
 1. `00 project-framing`
 2. `10 feature-architecture`
 3. `12 livewire-component-architecture` + `13 livewire-forms-and-tables`
-4. `20 data-and-eloquent`
-5. 實作
-6. `14 livewire-testing` + `30 testing-and-quality`
-7. `15 livewire-performance-and-pitfalls`
-8. `40 release-and-observability`
+4. `16 multilingual-strategy` + `17 tenant-translation-override`
+5. `20 data-and-eloquent`
+6. 實作
+7. `14 livewire-testing` + `30 testing-and-quality`
+8. `15 livewire-performance-and-pitfalls`
+9. `40 release-and-observability`
 
