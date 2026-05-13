@@ -9,6 +9,10 @@
 | 00 | `project-framing` | 需求模糊、剛起案 | 需求邊界、風險與里程碑 |
 | 10 | `feature-architecture` | 要切分功能模組與責任 | 模組切分、路由/Controller/Service 設計 |
 | 11 | `api-design` | 要定義 REST API | endpoint 規格、驗證規則、錯誤格式 |
+| 12 | `livewire-component-architecture` | Livewire 頁面分層與責任切分 | component 結構與狀態邊界 |
+| 13 | `livewire-forms-and-tables` | Livewire CRUD 互動頁 | 表單/搜尋/分頁實作清單 |
+| 14 | `livewire-testing` | 寫完 Livewire 元件要驗證 | component 測試矩陣 |
+| 15 | `livewire-performance-and-pitfalls` | 遇到延遲或重繪過多 | 效能優化與避坑指引 |
 | 20 | `data-and-eloquent` | 需要 schema 與 Eloquent | migration、關聯、query 策略 |
 | 30 | `testing-and-quality` | 寫完功能要驗證 | 測試矩陣、最低測試清單 |
 | 40 | `release-and-observability` | 準備上線與維運 | 發版 checklist、監控與 rollback |
@@ -21,12 +25,14 @@
 3. **每個 skill 的輸出都要落地到檔案**（不是只留在對話）。
 4. **測試與回滾方案必須成對出現**。
 
-## 推薦流程（快速版）
+## 推薦流程（Laravel + Livewire）
 
 1. `00 project-framing`
-2. `10 feature-architecture` + `11 api-design`
-3. `20 data-and-eloquent`
-4. 實作
-5. `30 testing-and-quality`
-6. `40 release-and-observability`
+2. `10 feature-architecture`
+3. `12 livewire-component-architecture` + `13 livewire-forms-and-tables`
+4. `20 data-and-eloquent`
+5. 實作
+6. `14 livewire-testing` + `30 testing-and-quality`
+7. `15 livewire-performance-and-pitfalls`
+8. `40 release-and-observability`
 
