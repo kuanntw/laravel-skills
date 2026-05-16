@@ -9,9 +9,13 @@
 - `wire:submit.prevent`：統一送出入口
 
 ## 列表模式
-- 使用 `WithPagination`
+- 只要是資料量可能偏大的列表，一律啟用分頁（預設使用 `WithPagination`）
 - 搜尋條件變更時 `resetPage()`
 - 查詢集中在 computed / query builder method
+
+## 匯入/匯出規範
+- 匯出資料功能必須支援 `xlsx`
+- 匯入資料功能必須同時支援 `csv` 與 `xlsx`
 
 ## 實作清單
 1. 輸入防呆（trim、型別轉換）
@@ -19,4 +23,6 @@
 3. 錯誤訊息（欄位 + 全域）
 4. loading skeleton
 5. 空狀態文案
+6. 列表分頁（大資料量時不可省略）
+7. 匯入/匯出格式檢查（`csv`/`xlsx`）
 

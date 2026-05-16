@@ -7,7 +7,9 @@
 - 資源命名使用複數：`/users`, `/orders`
 - 操作語義依 HTTP method
 - 錯誤格式統一：`code`, `message`, `details`
-- 分頁統一：`meta` + `links`
+- 列表只要可能有大量資料，一律提供分頁（回應統一 `meta` + `links`）
+- 資料匯出端點至少支援 `xlsx`
+- 資料匯入端點需同時支援 `csv` 與 `xlsx`
 
 ## 設計清單
 1. Endpoint 一覽（method/path/用途）
