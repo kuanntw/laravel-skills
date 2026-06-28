@@ -7,6 +7,7 @@
 | 編號 | Skill | 何時使用 | 主要輸出 |
 |---|---|---|---|
 | 00 | `project-framing` | 需求模糊、剛起案 | 需求邊界、風險與里程碑 |
+| 01 | `static-assets-and-external-resources` | 涉及圖片、字型、JS/CSS、CDN 或 on-premise 部署限制 | 靜態資源策略、外部資源風險與本地化方案 |
 | 10 | `feature-architecture` | 要切分功能模組與責任 | 模組切分、路由/Controller/Service 設計 |
 | 11 | `api-design` | 要定義 REST API | endpoint 規格、驗證規則、錯誤格式 |
 | 12 | `livewire-component-architecture` | Livewire 頁面分層與責任切分 | component 結構與狀態邊界 |
@@ -26,18 +27,20 @@
 
 1. **先定義 Done，再開始寫 Code**。
 2. **每次只引入最少必要 skill**，避免流程過重。
+   - 若任務涉及靜態資源、外部 CDN asset 或部署環境限制，必須納入 `01 static-assets-and-external-resources`。
 3. **每個 skill 的輸出都要落地到檔案**（不是只留在對話）。
 4. **測試與回滾方案必須成對出現**。
 
 ## 推薦流程（Laravel + Livewire）
 
 1. `00 project-framing`
-2. `10 feature-architecture`
-3. `12 livewire-component-architecture` + `13 livewire-forms-and-tables`
-4. `16 multilingual-strategy` + `17 tenant-translation-override`
-5. `20 data-and-eloquent`
-6. 實作
-7. `14 livewire-testing` + `30 testing-and-quality` + `31 spec-consistency-and-coverage`
-8. `15 livewire-performance-and-pitfalls`
-9. `40 release-and-observability` + `41 operation-manual`
+2. `01 static-assets-and-external-resources`（若涉及靜態資源 / CDN / on-premise）
+3. `10 feature-architecture`
+4. `12 livewire-component-architecture` + `13 livewire-forms-and-tables`
+5. `16 multilingual-strategy` + `17 tenant-translation-override`
+6. `20 data-and-eloquent`
+7. 實作
+8. `14 livewire-testing` + `30 testing-and-quality` + `31 spec-consistency-and-coverage`
+9. `15 livewire-performance-and-pitfalls`
+10. `40 release-and-observability` + `41 operation-manual`
 
