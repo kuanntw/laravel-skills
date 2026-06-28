@@ -1,5 +1,11 @@
 # Template — Livewire Task
 
+## Framework Choice
+- Confirmed framework: Livewire / Filament / Hybrid
+- Reasoning:
+- User discussion notes:
+- Boundary: Livewire for PHP-driven dynamic UI components; Filament for Livewire-based admin panels, forms, tables, and dashboards.
+
 ## Use Case
 
 ## Component Design

@@ -26,14 +26,15 @@
 ## 使用原則
 
 1. **先定義 Done，再開始寫 Code**。
-2. **每次只引入最少必要 skill**，避免流程過重。
+2. **先討論 Livewire / Filament 選型，避免混亂**：Livewire 是 Laravel 的底層互動 component 框架，讓團隊用 PHP 撰寫動態 UI、減少大量前端 JavaScript；Filament 是建立在 Livewire 上的 Laravel UI framework，適合快速建立 admin panel、forms、tables、dashboards。
+3. **每次只引入最少必要 skill**，避免流程過重。
    - 若任務涉及靜態資源、外部 CDN asset 或部署環境限制，必須納入 `01 static-assets-and-external-resources`。
-3. **每個 skill 的輸出都要落地到檔案**（不是只留在對話）。
-4. **測試與回滾方案必須成對出現**。
+4. **每個 skill 的輸出都要落地到檔案**（不是只留在對話）。
+5. **測試與回滾方案必須成對出現**。
 
-## 推薦流程（Laravel + Livewire）
+## 推薦流程（Laravel + Livewire / Filament）
 
-1. `00 project-framing`
+1. `00 project-framing`：先確認要用 Livewire 自行組互動 UI，或用 Filament 做後台 / 表單 / 資料表 / dashboard。
 2. `01 static-assets-and-external-resources`（若涉及靜態資源 / CDN / on-premise）
 3. `10 feature-architecture`
 4. `12 livewire-component-architecture` + `13 livewire-forms-and-tables`
