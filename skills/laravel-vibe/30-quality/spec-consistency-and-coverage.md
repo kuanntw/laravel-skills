@@ -16,6 +16,7 @@
 ## PR 必附內容
 - Spec 版本或連結
 - AC 對應測試矩陣
+- 涉及資料存取時附 [安全驗收矩陣](../templates/security-acceptance-matrix.md)，分開記錄授權、驗證、跨租戶、mass assignment、query allowlist
 - Coverage 摘要（模組/範圍）
 
 ## 反模式
