@@ -1,0 +1,11 @@
+{
+  "packages": [
+    {"name": "laravel/framework", "version": "v12.0.0"},
+    {"name": "livewire/livewire", "version": "v3.6.0"},
+    {"name": "filament/panels", "version": "v3.3.0"}
+  ],
+  "packages-dev": [
+    {"name": "laravel/boost", "version": "1.0.0"},
+    {"name": "pestphp/pest", "version": "3.8.0"}
+  ]
+}

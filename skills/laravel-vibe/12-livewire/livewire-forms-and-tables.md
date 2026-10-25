@@ -4,6 +4,8 @@
 快速交付常見 CRUD 互動：表單、搜尋、排序、分頁。
 
 ## 表單模式
+以下以 Livewire 3 為例；先做 [版本分流](../00-core/version-detection-and-routing.md)，2 / 4 依相同 major 文件與專案慣例調整，不直接套用。
+
 - `wire:model.live`：即時更新（欄位少、互動即時）
 - `wire:model.blur`：失焦更新（降低請求數）
 - `wire:submit.prevent`：統一送出入口
@@ -12,6 +14,8 @@
 - 只要是資料量可能偏大的列表，一律啟用分頁（預設使用 `WithPagination`）
 - 搜尋條件變更時 `resetPage()`
 - 查詢集中在 computed / query builder method
+- Sort / direction / filter / page size 採 server-side allowlist，查詢、總數與匯出都限制 tenant。
+- 公開屬性及 action 參數視為不可信輸入；每次寫入都需授權，不能只靠 mount 或 UI 隱藏。
 
 ## 匯入/匯出規範
 - 匯出資料功能必須支援 `xlsx`

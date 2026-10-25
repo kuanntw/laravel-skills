@@ -40,6 +40,9 @@
 - 影響範圍（誰會受影響、是否 breaking）
 - 使用方式差異（Before/After）
 - 若有流程變更：附一段新流程示例
+- 若涉及版本分流：附 lock 版本證據、對應官方文件與待確認差異，不以最新版當預設。
+- 若涉及資料存取：附 allowed / denied / cross-tenant 與無副作用驗收；validation 失敗不能替代 denied。
+- 新增或修改可執行 helper 時：附 repository-local 測試命令與結果，明列 application tests 的執行限制。
 
 ## 4) 版本與變更紀錄建議
 
@@ -62,6 +65,10 @@
 - [ ] i18n 是否提供 short/long/abbr 與 fallback 規則？
 - [ ] 模板是否可直接複製使用？
 - [ ] 是否避免重複與互相矛盾的規範？
+- [ ] `SKILL.md` 是否仍為薄入口，保留索引與治理、未擴張工具權限？
+- [ ] `python3 -m unittest discover -s tests -v` 與 `git diff --check` 是否通過？
+- [ ] 來源有 URL / 查閱日期，實際重用上游內容時有著作權與完整授權 notice？
+- [ ] README 的 Revision History 是否記錄實際變更及未跑項目，未捏造版本號或測試結果？
 
 ## 6) 推薦提交順序
 
@@ -79,3 +86,7 @@
 1. **Spec 一致性**：PR 可追蹤 spec 與 AC 對應。
 2. **Unit test coverage**：核心商業邏輯需有 coverage 摘要。
 3. **操作手冊**：需提供可執行的操作與排錯步驟。
+
+## 8) 版本與安全驗收示例
+
+先讀目標專案 composer.lock，若鎖定 Laravel 12 / Livewire 3，就選同 major 文件與既有測試 runner，不改套件版本。填寫 `templates/security-acceptance-matrix.md`，用合法輸入分別測可操作、無權限、跨租戶，再獨立測 validation 與無副作用。維護本 skills 套件時跑上述 Python 檢查；實際 application suite 只在具備 PHP / vendor / 隔離測試 DB 的目標專案執行。

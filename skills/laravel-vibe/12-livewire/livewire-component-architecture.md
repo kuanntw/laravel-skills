@@ -17,6 +17,8 @@
 - **UI Fragment Component**：可重用小區塊（tag selector、status badge）
 
 ## 結構建議
+先做 [版本分流](../00-core/version-detection-and-routing.md)。以下為 Livewire 3 常見 class-based 結構；Livewire 2 / 4 或已自訂 namespace 的專案沿用實際配置，不能僅為符合範例搬檔。Form Object 也須核對安裝版本。
+
 - `app/Livewire/{Domain}/{Feature}/...`
 - `resources/views/livewire/{domain}/{feature}/...`
 - 複雜邏輯抽到 `Action/Service`，component 只做狀態與呼叫。

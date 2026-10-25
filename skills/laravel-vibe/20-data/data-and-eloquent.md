@@ -35,6 +35,13 @@
 - 複雜條件用 query scope。
 - 可重用統計查詢抽到 Read Model / Query Service。
 - 資料量大時，使用 chunk/cursor。
+- Tenant scope 應包含 route binding、關聯、列表、匯出與統計；特別測巢狀 `orWhere` 不會逸出目前租戶。
+- 排序欄位與 filter operator 用固定 map / allowlist，值才交給參數綁定。欄位名本身不能靠 binding 防注入。
+
+## 寫入安全
+- 輸入只取已驗證且明確允許的欄位，配合 `$fillable` / `$guarded`；不可用 `$request->all()` 或整包 Livewire state 做 mass assignment。
+- tenant / owner / role 等敏感欄位由可信 server context 或獨立授權 action 管理，不因通過 validation 就接受。
+- 建立與更新均測敏感欄位注入；拒絕後原資料、關聯、筆數及副作用都不變。詳見 [授權與租戶測試](../30-quality/authorization-and-tenant-tests.md)。
 
 ## 輸出模板
 - ER 簡圖（文字可）
